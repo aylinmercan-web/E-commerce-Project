@@ -38,7 +38,7 @@ function Header() {
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-slate-700">
           <Link to="/">Home</Link>
           <span className="flex items-center gap-1">
-            <a href="/shop">Shop</a>
+            <Link to="/shop">Shop</Link>
             <ChevronDown size={14} />
           </span>
           <a href="/about">About</a>
