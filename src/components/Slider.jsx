@@ -27,7 +27,7 @@ function Slider({ slides }) {
         </h1>
         <p className="text-sm md:text-base text-slate-700">{slide.description}</p>
         <button className="w-fit bg-sky-500 text-white font-bold px-6 py-3 mt-2">
-          SHOP NOW
+          {slide.buttonText || 'SHOP NOW'}
         </button>
       </div>
 
