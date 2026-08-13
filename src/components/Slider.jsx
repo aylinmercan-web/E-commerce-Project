@@ -15,7 +15,7 @@ function Slider({ slides }) {
   const slide = slides[index]
 
   return (
-    <section className="relative flex items-center justify-between overflow-hidden bg-gradient-to-r from-sky-300 to-emerald-200 mx-4 md:mx-10 mt-6 rounded-md px-6 md:px-16 py-10 md:py-20">
+    <section className="relative flex items-center justify-between overflow-hidden bg-gradient-to-r from-sky-300 to-emerald-200 mx-4 md:mx-10 mt-6 rounded-md px-6 md:px-16 py-10 md:py-20 h-[420px] md:h-[520px]">
       <button onClick={prevSlide} className="absolute left-2 md:left-6 flex z-20">
         <ChevronLeft size={28} className="text-white" />
       </button>
@@ -27,7 +27,7 @@ function Slider({ slides }) {
         </h1>
         <p className="text-sm md:text-base text-slate-700">{slide.description}</p>
         <button className="w-fit bg-sky-500 text-white font-bold px-6 py-3 mt-2">
-          SHOP NOW
+          {slide.buttonText || 'SHOP NOW'}
         </button>
       </div>
 
