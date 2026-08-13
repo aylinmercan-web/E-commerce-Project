@@ -1,6 +1,8 @@
 import { Zap, Layers, TrendingUp, Star, Download, Clock, Calendar } from 'lucide-react'
 import { FaLyft, FaStripe, FaAws, FaRedditAlien } from 'react-icons/fa6'
 import brandIcon3 from '../assets/brand-icon-3.jpeg'
+import hooliLogo from '../assets/hooli-logo.png'
+import Slider from '../components/Slider'
 import ProductCard from '../components/ProductCard'
 import weLoveImage1 from '../assets/we-love-1.png'
 import weLoveImage2 from '../assets/we-love-2.png'
@@ -11,8 +13,8 @@ import postImage1 from '../assets/post-1.jpeg'
 import postImage2 from '../assets/post-2.jpeg'
 
 const brands = [
-  { name: 'Hooli', icon: null },
-  { name: 'Lyft', icon: FaLyft },
+  { name: 'Hooli', image: hooliLogo },
+  { name: '', icon: FaLyft },
   { name: '', image: brandIcon3 },
   { name: 'Stripe', icon: FaStripe },
   { name: 'AWS', icon: FaAws },
@@ -85,7 +87,7 @@ function FeaturedPostCard({ image }) {
           </span>
         </div>
         <h3 className="text-base font-bold text-slate-900">Graphic Design</h3>
-        <p className="text-sm text-gray-500 max-w-xs">
+        <p className="text-base leading-7 text-gray-500 max-w-xs">
           We focus on ergonomics and meeting you where you work. It&apos;s only a keystroke away.
         </p>
         <span className="flex items-center gap-1 text-xs text-gray-400">
@@ -126,6 +128,23 @@ function FeaturedPostCard({ image }) {
 function HomePage() {
   return (
     <div className="flex flex-col w-full">
+      <Slider
+        slides={[
+          {
+            tag: 'SUMMER 2020',
+            title: 'NEW COLLECTION',
+            description: 'We know how large objects will act, but things on a small scale.',
+            image: '/row.png',
+          },
+          {
+            tag: 'SUMMER 2020',
+            title: 'BIG SALE',
+            description: 'Problems trying to resolve the conflict between.',
+            image: '/row.png',
+          },
+        ]}
+      />
+
       {/* Hero Grid */}
       <section className="grid grid-cols-1 md:grid-cols-2 gap-4 mx-4 md:mx-10 mt-6">
         <HeroCard image={heroBannerImage} className="h-64 md:h-[500px]" />
@@ -140,7 +159,7 @@ function HomePage() {
         {brands.map(({ name, icon: Icon, image }, index) => (
           <span key={`${name}-${index}`} className="flex items-center gap-2 text-gray-400">
             {image ? (
-              <img src={image} alt="brand" className="h-8 w-auto object-contain grayscale opacity-70" />
+              <img src={image} alt="brand" className="h-10 md:h-12 w-auto object-contain grayscale opacity-70" />
             ) : Icon ? (
               <>
                 <Icon size={22} />
@@ -159,7 +178,7 @@ function HomePage() {
         <h2 className="text-2xl md:text-3xl font-extrabold text-slate-900">
           BESTSELLER PRODUCTS
         </h2>
-        <p className="text-sm text-gray-500">
+        <p className="text-base leading-7 text-gray-500">
           Problems trying to resolve the conflict between
         </p>
 
@@ -179,7 +198,7 @@ function HomePage() {
             <img
               src={weLoveImage1}
               alt="We love what we do"
-              className="shrink-0 w-32 md:w-44 h-44 md:h-60 rounded-md object-cover shadow-lg mt-8"
+              className="shrink-0 w-32 md:w-44 h-44 md:h-60 rounded-md object-cover shadow-lg"
             />
             <img
               src={weLoveImage2}
@@ -195,11 +214,11 @@ function HomePage() {
             <h2 className="mt-4 text-3xl font-bold leading-tight text-[#252B42] md:text-4xl">
               We love what we do
             </h2>
-            <p className="mx-auto mt-4 max-w-[320px] text-sm leading-6 text-[#737373] md:mx-0">
+            <p className="mx-auto mt-4 max-w-[320px] text-base leading-7 text-[#737373] md:mx-0">
               Problems trying to resolve the conflict between the two major
               realms of Classical physics: Newtonian mechanics.
             </p>
-            <p className="mx-auto mt-5 max-w-[320px] text-sm leading-6 text-[#737373] md:mx-0">
+            <p className="mx-auto mt-5 max-w-[320px] text-base leading-7 text-[#737373] md:mx-0">
               Problems trying to resolve the conflict between the two major
               realms of Classical physics: Newtonian mechanics.
             </p>
@@ -211,7 +230,7 @@ function HomePage() {
           <h2 className="text-2xl md:text-3xl font-extrabold text-slate-900">
             THE BEST SERVICES
           </h2>
-          <p className="text-sm text-gray-500">
+          <p className="text-base leading-7 text-gray-500">
             Problems trying to resolve the conflict between
           </p>
         </div>
@@ -223,7 +242,7 @@ function HomePage() {
                 <Icon size={24} />
               </span>
               <h3 className="text-base font-bold text-slate-900">{title}</h3>
-              <p className="text-sm text-gray-500">{description}</p>
+              <p className="text-base leading-7 text-gray-500">{description}</p>
             </div>
           ))}
         </div>
