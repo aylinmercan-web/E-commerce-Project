@@ -43,7 +43,7 @@ function Header() {
           </span>
           <a href="/about">About</a>
           <a href="/blog">Blog</a>
-          <a href="/contact">Contact</a>
+          <Link to="/contact">Contact</Link>
           <a href="/pages">Pages</a>
         </nav>
 
