@@ -1,7 +1,5 @@
 import { Zap, Layers, TrendingUp, Star, Download, Clock, Calendar } from 'lucide-react'
-import { FaLyft, FaStripe, FaAws, FaRedditAlien } from 'react-icons/fa6'
-import brandIcon3 from '../assets/brand-icon-3.jpeg'
-import hooliLogo from '../assets/hooli-logo.png'
+import brandStrip from '../assets/brand-strip.png'
 import Slider from '../components/Slider'
 import ProductCard from '../components/ProductCard'
 import weLoveImage1 from '../assets/we-love-1.png'
@@ -11,15 +9,6 @@ import featuredPostImage2 from '../assets/featured-post-2.jpg'
 import heroBannerImage from '../assets/hero-banner.jpg'
 import postImage1 from '../assets/post-1.jpeg'
 import postImage2 from '../assets/post-2.jpeg'
-
-const brands = [
-  { name: 'Hooli', image: hooliLogo },
-  { name: '', icon: FaLyft },
-  { name: '', image: brandIcon3 },
-  { name: 'Stripe', icon: FaStripe },
-  { name: 'AWS', icon: FaAws },
-  { name: 'Reddit', icon: FaRedditAlien },
-]
 
 const services = [
   {
@@ -137,7 +126,7 @@ function HomePage() {
             image: '/row.png',
           },
           {
-            tag: 'SUMMER 2020',
+            tag: 'WINTER 2020',
             title: 'BIG SALE',
             description: 'Problems trying to resolve the conflict between.',
             image: '/row.png',
@@ -155,26 +144,17 @@ function HomePage() {
       </section>
 
       {/* Brand Strip */}
-      <section className="flex flex-wrap items-center justify-center gap-8 md:gap-16 px-6 py-10 border-b border-gray-100">
-        {brands.map(({ name, icon: Icon, image }, index) => (
-          <span key={`${name}-${index}`} className="flex items-center gap-2 text-gray-400">
-            {image ? (
-              <img src={image} alt="brand" className="h-10 md:h-12 w-auto object-contain grayscale opacity-70" />
-            ) : Icon ? (
-              <>
-                <Icon size={22} />
-                {name && <span className="text-lg md:text-xl font-bold tracking-wide">{name}</span>}
-              </>
-            ) : (
-              <span className="text-xl md:text-2xl font-bold italic tracking-wide">'{name}</span>
-            )}
-          </span>
-        ))}
+      <section className="flex items-center justify-center px-6 py-6 border-b border-gray-100">
+        <img
+          src={brandStrip}
+          alt="Hooli, Lyft, Stripe, AWS, Reddit"
+          className="w-full max-w-4xl object-contain"
+        />
       </section>
 
       {/* Featured Products */}
       <section className="flex flex-col items-center gap-2 px-6 py-16">
-        <span className="text-sm text-gray-500">Featured Products</span>
+        <span className="text-base text-gray-500">Featured Products</span>
         <h2 className="text-2xl md:text-3xl font-extrabold text-slate-900">
           BESTSELLER PRODUCTS
         </h2>
@@ -226,7 +206,7 @@ function HomePage() {
         </div>
 
         <div className="flex flex-col items-center gap-2 max-w-5xl w-full text-center">
-          <span className="text-sm text-gray-500">Featured Products</span>
+          <span className="text-base text-gray-500">Featured Products</span>
           <h2 className="text-2xl md:text-3xl font-extrabold text-slate-900">
             THE BEST SERVICES
           </h2>
@@ -249,7 +229,7 @@ function HomePage() {
 
         {/* Featured Posts */}
         <div className="flex flex-col items-center gap-2 max-w-5xl w-full text-center mt-6">
-          <span className="text-sm text-gray-500">Practice Advice</span>
+          <span className="text-base text-gray-500">Practice Advice</span>
           <h2 className="text-2xl md:text-3xl font-extrabold text-slate-900">
             Featured Posts
           </h2>
