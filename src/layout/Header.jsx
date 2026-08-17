@@ -41,7 +41,7 @@ function Header() {
             <Link to="/shop">Shop</Link>
             <ChevronDown size={14} />
           </span>
-          <a href="/about">About</a>
+          <Link to="/about">About</Link>
           <a href="/blog">Blog</a>
           <Link to="/contact">Contact</Link>
           <Link to="/team">Team</Link>
