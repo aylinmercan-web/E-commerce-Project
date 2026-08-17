@@ -7,6 +7,7 @@ import ShopPage from './pages/ShopPage'
 import ProductDetailPage from './pages/ProductDetailPage'
 import ContactPage from './pages/ContactPage'
 import TeamPage from './pages/TeamPage'
+import AboutUsPage from './pages/AboutUsPage'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route exact path="/product/:id" component={ProductDetailPage} />
           <Route exact path="/contact" component={ContactPage} />
           <Route exact path="/team" component={TeamPage} />
+          <Route exact path="/about" component={AboutUsPage} />
         </Switch>
       </PageContent>
       <Footer />
