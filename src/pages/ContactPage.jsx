@@ -1,3 +1,5 @@
+import { FaTwitter, FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa6'
+
 function ContactPage() {
   return (
     <div className="flex flex-col w-full">
@@ -5,6 +7,25 @@ function ContactPage() {
       <section className="flex flex-col items-center justify-center gap-2 bg-gray-50 px-6 py-10 md:py-16">
         <h1 className="text-2xl md:text-4xl font-extrabold text-slate-900">Contact</h1>
         <p className="text-sm text-gray-500">Home &gt; Contact</p>
+      </section>
+
+      {/* Questions banner */}
+      <section className="flex flex-col items-center gap-5 text-center px-6 py-16 md:py-20">
+        <h2 className="max-w-2xl text-3xl md:text-4xl font-extrabold text-slate-900 leading-tight">
+          Get answers to all your questions.
+        </h2>
+        <p className="max-w-md text-sm md:text-base text-gray-500">
+          Problems trying to resolve the conflict between the two major realms of Classical physics:
+        </p>
+        <button className="bg-sky-500 text-white text-sm font-bold tracking-wide px-8 py-4">
+          CONTACT OUR COMPANY
+        </button>
+        <div className="flex items-center gap-4 mt-2 text-gray-400">
+          <FaTwitter size={20} />
+          <FaFacebook size={20} />
+          <FaInstagram size={20} />
+          <FaLinkedin size={20} />
+        </div>
       </section>
 
       {/* Contact content */}
