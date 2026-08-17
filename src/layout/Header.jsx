@@ -44,6 +44,7 @@ function Header() {
           <a href="/about">About</a>
           <a href="/blog">Blog</a>
           <Link to="/contact">Contact</Link>
+          <Link to="/team">Team</Link>
           <a href="/pages">Pages</a>
         </nav>
 
