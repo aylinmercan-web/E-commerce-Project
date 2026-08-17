@@ -7,7 +7,7 @@ const team = [
     id: 1,
     name: 'Emre Şahiner',
     role: 'Software Development Instructor',
-    description: 'Supports the team during the development process.',
+    description: 'Guides us through the bootcamp and gives feedback on every task.',
     image: emreSahiner,
   },
   {
@@ -38,9 +38,12 @@ function TeamPage() {
       {/* Team grid */}
       <section className="flex flex-col items-center gap-2 px-6 py-16">
         <span className="text-sm text-gray-500">Our Team</span>
-        <h2 className="text-2xl md:text-3xl font-extrabold text-slate-900 mb-8">
+        <h2 className="text-2xl md:text-3xl font-extrabold text-slate-900">
           MEET THE TEAM
         </h2>
+        <p className="max-w-md text-sm text-gray-500 text-center leading-6 mb-8">
+          We built this e-commerce project together as part of the Workintech bootcamp.
+        </p>
 
         <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-8 w-full max-w-4xl">
           {team.map((member) => (
